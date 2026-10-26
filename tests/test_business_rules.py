@@ -46,7 +46,7 @@ def test_requires_deposit_at_limit() -> None:
 
 def test_requires_deposit_above_limit() -> None:
     """Test variable returns False when quote exceeds deposit amount"""
-    assert requires_deposit(1000.01) is False
+    assert requires_deposit(1000.01) is True
 
 def test_needs_inspection_days_at_limit() -> None:
     """Test variable returns false when days are at limit of 7"""

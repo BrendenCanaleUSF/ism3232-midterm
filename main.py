@@ -1,4 +1,11 @@
-from business_rules import (calculate_quote, calculate_rental_cost, format_rental_cost, format_rental_line, get_rental_discount, largest_rental, needs_inspection, requires_deposit, total_quoted )
+from business_rules import (
+    calculate_quote,
+    format_rental_line,
+    largest_rental,
+    needs_inspection,
+    requires_deposit,
+    total_quoted,
+)
 
 rentals = [
     {"customer": "Alvarez", "daily_rate": 60.00, "days": 2, "contractor": False},
@@ -10,6 +17,7 @@ rentals = [
     {"customer": "Garza", "daily_rate": 95.00, "days": 5, "contractor": True},
     {"customer": "Hughes", "daily_rate": 200.00, "days": 7, "contractor": False},
 ]
+
 
 def main() -> None:
     """prints quotes and summarizes statistics"""
@@ -47,4 +55,4 @@ def main() -> None:
     print(f"Average quote: ${average:.2f}")
     print(f"Largest quote: {largest}")
     print(f"Deposits required: {deposit_count}")
-    print(f"Inspections required: {inspection_count}") 
+    print(f"Inspections required: {inspection_count}")
